@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./FilmInfo.module.scss";
-import { Link } from "react-router-dom";
 import { Tag } from "../Tag/Tag";
 import { Review } from "../Review/Review";
+import { LinkButton } from "../LinkButton/LinkButton";
 
 function FilmInfo({ info }) {
   return (
@@ -17,17 +17,24 @@ function FilmInfo({ info }) {
       </div>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
-          <img alt={info.name} src={info.image?.original} />
+          {info.image && <img alt={info.name} src={info.image.original} />}
+          {!info.image && (
+            <img
+              src="https://via.placeholder.com/250x350?text=No+image"
+              alt={`${info.name}`}
+            />
+          )}
         </div>
         <div className={styles.info}>
-          <p>{info.summary?.replace(/(<([^>]+)>)/gi, "")}</p>
+          {info.summary && <p>{info.summary.replace(/(<([^>]+)>)/gi, "")}</p>}
+          {!info.summary && <p>No description provided</p>}
           <div>
             <Review rating={info.rating.average} />
           </div>
         </div>
       </div>
       <div className={styles.footer}>
-        <Link to="/">Volver</Link>
+        <LinkButton to="/">VOLVER</LinkButton>
       </div>
     </div>
   );

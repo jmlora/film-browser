@@ -1,0 +1,17 @@
+@import '../../assets/styles/variables.scss';
+
+a.linkButton {
+  background: $red;
+  border: 1px solid $red;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $white;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all .1s linear;
+
+  &:hover {
+    background: $white;
+    color: $red;
+  }
+}
