@@ -1,17 +1,24 @@
 import React from "react";
 import styles from "./Card.module.scss";
+import { Link } from "react-router-dom";
 
-function Card({ thumbnail, title, description }) {
+function Card({ id, name, image, summary }) {
   return (
-    <div className={styles.cardContainer}>
+    <Link to={`film/${id}`} className={styles.cardContainer}>
       <div className={styles.imageContainer}>
-        <img src={thumbnail} alt={`${title} film thumbnail`} />
+        {image && <img src={image.medium} alt={`${name} thumbnail`} />}
+        {!image && (
+          <img
+            src="https://via.placeholder.com/250x350?text=No+image"
+            alt={`${name} thumbnail`}
+          />
+        )}
       </div>
-      <div className={styles.title}>{title}</div>
+      <div className={styles.title}>{name}</div>
       <div className={styles.description}>
-        <p>{description}</p>
+        <p>{summary?.replace(/(<([^>]+)>)/gi, "")}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

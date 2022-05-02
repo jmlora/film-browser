@@ -5,10 +5,17 @@
   border: 2px solid $grey4;
   border-radius: 5px;
   box-sizing: border-box;
-  height: auto;
+  display: block;
+  height: 100%;
   position: relative;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
   width: 100%;
   
+  &:hover {
+    box-shadow: 0 0 10px $grey4;
+    transform: scale(1.01);
+  }
   .imageContainer {
     background: $grey5;
     box-sizing: border-box;

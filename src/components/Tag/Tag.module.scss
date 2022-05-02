@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables.scss";
+
+.tag {
+  border-radius: 3rem;
+  background: $grey4;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: .5rem;
+  padding: .5rem .8rem;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}

@@ -1,4 +1,15 @@
+@import "assets/styles/variables.scss";
+
 .App {
   font-family: "Roboto", sans-serif;
   text-align: center;
+
+  p {
+    color: $grey1;
+    line-height: 1.8rem;
+  }
+  a {
+    text-decoration: none;
+    color: $red;
+  }
 }
