@@ -6,7 +6,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(faStar);
 
-function Review({ rating }) {
+type ReviewType = {
+  rating?: number,
+}
+
+function Review({ rating }: ReviewType) {
   return (
     <div className={styles.review}>
       <FontAwesomeIcon icon={faStar} />

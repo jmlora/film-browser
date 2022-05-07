@@ -7,6 +7,7 @@ afterEach(cleanup);
 
 it("Should show a Card with thumbnail, title and description", () => {
   const props = {
+    id: 139,
     image: {
       medium:
         "https://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"

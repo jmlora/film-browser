@@ -15,5 +15,5 @@ it("Should render the link and its content", () => {
 
   expect(getByText("TEST")).toBeTruthy();
   expect(getByRole("link")).toHaveProperty("href");
-  expect(getByRole("link").href).toContain("/test");
+  expect((getByRole("link") as HTMLAnchorElement).href).toContain("/test");
 });

@@ -2,7 +2,16 @@ import React from "react";
 import styles from "./Card.module.scss";
 import { Link } from "react-router-dom";
 
-function Card({ id, name, image, summary }) {
+type CardProps = {
+  id: number,
+  name: string,
+  image: {
+    medium: string,
+  },
+  summary: string,
+}
+
+function Card({ id, name, image, summary }:CardProps) {
   return (
     <Link to={`film/${id}`} className={styles.cardContainer}>
       <div className={styles.imageContainer}>

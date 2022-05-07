@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Tag.module.scss";
 
-function Tag({ tag }) {
+function Tag({ tag }: {tag: string}) {
   return <div className={styles.tag}>{tag}</div>;
 }
 

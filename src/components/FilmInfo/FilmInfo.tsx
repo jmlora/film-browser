@@ -3,8 +3,9 @@ import styles from "./FilmInfo.module.scss";
 import { Tag } from "../Tag/Tag";
 import { Review } from "../Review/Review";
 import { LinkButton } from "../LinkButton/LinkButton";
+import { IFilmInfo } from "../../interfaces/IFilmInfo";
 
-function FilmInfo({ info }) {
+function FilmInfo({ info }: {info: IFilmInfo}) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>

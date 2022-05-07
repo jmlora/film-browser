@@ -2,8 +2,14 @@ import React from "react";
 import styles from "./CardList.module.scss";
 import { Card } from "../Card/Card";
 import { Loader } from "../Loader/Loader";
+import { IFilmListInfo } from '../../interfaces/IFilmListInfo';
 
-function CardList({ filmData, isLoading }) {
+type CardListType = {
+  filmData: IFilmListInfo[],
+  isLoading: boolean
+};
+
+function CardList({ filmData, isLoading }: CardListType) {
   return (
     <div className={styles.wrapper}>
       {isLoading && (
